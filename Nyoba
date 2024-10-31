@@ -1,0 +1,62 @@
+public class Mahasiswa {
+    int NIM;
+    String nama;
+    char kelas;
+    String jurusan;
+    String alamat;
+
+    // Konstruktor
+    public Mahasiswa(int NIM, String nama, char kelas, String jurusan, String alamat) {
+        this.NIM = NIM;
+        this.nama = nama;
+        this.kelas = kelas;
+        this.jurusan = jurusan;
+        this.alamat = alamat;
+    }
+
+    public Mahasiswa() {
+    }
+
+    public void tampil() {
+        System.out.println("NIM : " + NIM);
+        System.out.println("Nama : " + nama);   
+        System.out.println("Kelas : " + kelas);
+        System.out.println("Jurusan : " + jurusan);
+        System.out.println("Alamat : " + alamat);
+    }
+
+    public String getNama() {
+        return this.nama;
+    }
+
+    public void setAlamat(String alamatBaru) {
+        this.alamat = alamatBaru;
+    }
+
+    public void updateJurusan(String jurusanBaru) {
+        this.jurusan = jurusanBaru;
+    }
+
+    public void updateNIM(int NIMBaru) {
+        this.NIM = NIMBaru;
+    }
+
+    public void updateKelas(char kelasBaru) {
+        this.kelas = kelasBaru;
+    }
+
+    public static void main(String[] args) {
+       
+        Mahasiswa mhs = new Mahasiswa(23533762, "Nabil", 'B', "Teknik Informatika", "Jenangan");
+        
+        mhs.tampil();
+        
+        mhs.setAlamat("Siman");
+        mhs.updateJurusan("Ilmu Komunikasi");
+        mhs.updateNIM(23533891);
+        mhs.updateKelas('A');
+
+        System.out.println("\nData setelah perubahan:");
+        mhs.tampil();
+    }
+}
